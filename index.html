@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>해브투런 개인정보 처리방침</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>해브투런 개인정보 처리방침</h1>
+      <p class="last-updated">최종 업데이트: 2026년 2월 8일</p>
+      <div class="lang-switch">
+        <a href="en/">English</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="intro">
+        <h2>1. 소개</h2>
+        <p>
+          안녕하세요! 해브투런(Have2Run) 앱을 이용해 주셔서 감사합니다.
+          우리는 여러분의 러닝 목표 달성을 돕기 위해 AI 코칭과 훈련 관리 서비스를 제공합니다.
+        </p>
+        <p>
+          이 개인정보 처리방침은 해브투런 앱이 어떤 정보를 수집하고, 어떻게 사용하며,
+          어떻게 보호하는지 설명합니다. 여러분의 개인정보 보호는 우리에게 매우 중요합니다.
+        </p>
+      </section>
+
+      <section id="data-collection">
+        <h2>2. 수집하는 정보</h2>
+
+        <h3>2.1 건강 및 피트니스 데이터</h3>
+        <p><strong>수집 항목:</strong></p>
+        <ul>
+          <li>워크아웃 데이터 (러닝 기록)</li>
+          <li>거리 (Distance)</li>
+          <li>심박수 (Heart Rate)</li>
+          <li>소모 칼로리 (Active Calories Burned)</li>
+          <li>걸음 수 (Steps)</li>
+        </ul>
+        <p><strong>수집 출처:</strong> iOS의 HealthKit 또는 Android의 Health Connect를 통해 스마트워치 데이터를 읽어옵니다 (읽기 전용 권한).</p>
+        <p><strong>사용 목적:</strong> 훈련 세션 자동 완료, 레이스 기록 예측, 진행 상황 추적, AI 코칭 개인화</p>
+        <p><strong>제어 방법:</strong> 앱 설정에서 워치 동기화를 언제든지 켜거나 끌 수 있습니다.</p>
+
+        <h3>2.2 프로필 정보</h3>
+        <p><strong>수집 항목:</strong></p>
+        <ul>
+          <li>이름</li>
+          <li>이메일 주소</li>
+          <li>키, 몸무게</li>
+          <li>개인 기록 (PB: Personal Best)</li>
+          <li>시간 선호 (오전/오후)</li>
+        </ul>
+        <p><strong>수집 출처:</strong> 회원가입 시 직접 입력하거나 프로필 설정에서 업데이트</p>
+        <p><strong>사용 목적:</strong> 맞춤형 훈련 계획 생성, 레이스 예측, AI 코칭 개인화</p>
+
+        <h3>2.3 훈련 데이터</h3>
+        <p><strong>수집 항목:</strong></p>
+        <ul>
+          <li>훈련 세션 기록 (날짜, 거리, 페이스, 메모)</li>
+          <li>훈련 스케줄 및 목표</li>
+          <li>운동 사진 (스크린샷 업로드 시)</li>
+          <li>AI 코치와의 대화 내용</li>
+        </ul>
+        <p><strong>수집 출처:</strong> 직접 입력하거나 AI 코치가 생성</p>
+        <p><strong>사용 목적:</strong> 훈련 관리, AI 코칭 제공, 진행 상황 추적 및 분석</p>
+
+        <h3>2.4 인증 정보</h3>
+        <p><strong>수집 항목:</strong></p>
+        <ul>
+          <li>이메일/비밀번호 (이메일 가입 시)</li>
+          <li>소셜 로그인 정보 (Google, Apple, Kakao): 이름, 이메일, 프로필 사진</li>
+        </ul>
+        <p><strong>관리 주체:</strong> Supabase Auth</p>
+        <p><strong>사용 목적:</strong> 계정 인증 및 관리</p>
+
+        <h3>2.5 AI 코칭 데이터</h3>
+        <p><strong>수집 항목:</strong></p>
+        <ul>
+          <li>AI 코치와의 대화 내용</li>
+          <li>훈련 컨텍스트 (현재 목표, 진행 상황 등)</li>
+        </ul>
+        <p><strong>처리 주체:</strong> Google Gemini AI, OpenRouter (보조 AI 제공자)</p>
+        <p><strong>사용 목적:</strong> 맞춤형 훈련 조언, 대화형 코칭 제공</p>
+
+        <h3>2.6 이용 분석 및 진단 데이터</h3>
+        <p><strong>수집 항목:</strong></p>
+        <ul>
+          <li>앱 사용 패턴 (화면 조회, 기능 사용)</li>
+          <li>크래시 리포트 (오류 로그, 스택 트레이스)</li>
+          <li>성능 데이터 (앱 로딩 시간, 응답 속도)</li>
+        </ul>
+        <p><strong>처리 주체:</strong> Google Firebase (Analytics, Crashlytics)</p>
+        <p><strong>사용 목적:</strong> 앱 개선, 버그 수정, 성능 최적화</p>
+        <p><strong>익명화:</strong> 분석 데이터는 개인 식별이 불가능한 형태로 수집됩니다.</p>
+
+        <h3>2.7 기기 정보</h3>
+        <p><strong>수집 항목:</strong></p>
+        <ul>
+          <li>플랫폼 (iOS/Android)</li>
+          <li>앱 버전</li>
+          <li>기기 모델</li>
+          <li>네트워크 연결 상태</li>
+        </ul>
+        <p><strong>사용 목적:</strong> 기능 호환성 확인, 디버깅</p>
+      </section>
+
+      <section id="data-usage">
+        <h2>3. 정보 이용 목적</h2>
+        <p>우리는 수집한 정보를 다음 목적으로만 사용합니다:</p>
+        <ul>
+          <li><strong>맞춤형 훈련 제공:</strong> AI 코치가 여러분의 목표와 현재 상태에 맞는 훈련 계획을 생성합니다.</li>
+          <li><strong>레이스 기록 예측:</strong> 과거 훈련 데이터를 분석하여 목표 레이스의 예상 기록을 제공합니다.</li>
+          <li><strong>진행 상황 추적:</strong> 훈련 통계와 그래프로 발전 과정을 시각화합니다.</li>
+          <li><strong>앱 개선:</strong> 사용 패턴 분석을 통해 더 나은 사용자 경험을 제공합니다.</li>
+          <li><strong>고객 지원:</strong> 문의 사항에 답변하고 기술적 문제를 해결합니다.</li>
+        </ul>
+        <p><strong>명시적 금지 사항:</strong></p>
+        <ul>
+          <li>❌ 마케팅 또는 광고 목적으로 사용하지 않습니다.</li>
+          <li>❌ 제3자에게 판매하거나 임대하지 않습니다.</li>
+          <li>❌ 건강 데이터를 마케팅 목적으로 공유하지 않습니다.</li>
+        </ul>
+      </section>
+
+      <section id="third-party">
+        <h2>4. 제3자 서비스</h2>
+        <p>
+          앱 기능 제공을 위해 다음 제3자 서비스를 사용합니다.
+          각 서비스는 자체 개인정보 처리방침을 따르며, 우리는 이들이 동등하거나 더 높은 수준의 보호를 제공하도록 요구합니다.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>서비스</th>
+              <th>제공 기능</th>
+              <th>개인정보 처리방침</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Supabase</strong></td>
+              <td>백엔드 데이터베이스, 인증, 파일 저장소</td>
+              <td><a href="https://supabase.com/privacy" target="_blank">링크</a></td>
+            </tr>
+            <tr>
+              <td><strong>Google Firebase</strong></td>
+              <td>분석, 크래시 리포팅, 푸시 알림, 원격 설정, 앱 보안</td>
+              <td><a href="https://firebase.google.com/support/privacy" target="_blank">링크</a></td>
+            </tr>
+            <tr>
+              <td><strong>Google Gemini AI</strong></td>
+              <td>AI 코칭 대화 처리</td>
+              <td><a href="https://policies.google.com/privacy" target="_blank">링크</a></td>
+            </tr>
+            <tr>
+              <td><strong>OpenRouter</strong></td>
+              <td>AI 코칭 보조 제공자</td>
+              <td><a href="https://openrouter.ai/privacy" target="_blank">링크</a></td>
+            </tr>
+            <tr>
+              <td><strong>Google / Apple / Kakao</strong></td>
+              <td>소셜 로그인</td>
+              <td>각 제공자의 개인정보 처리방침 참조</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="security">
+        <h2>5. 데이터 보관 및 보안</h2>
+        <p><strong>보안 조치:</strong></p>
+        <ul>
+          <li><strong>전송 암호화:</strong> 모든 데이터는 HTTPS를 통해 암호화되어 전송됩니다.</li>
+          <li><strong>접근 제어:</strong> Supabase Row Level Security (RLS) 정책으로 데이터 접근을 제한합니다.</li>
+          <li><strong>앱 인증:</strong> Firebase App Check로 API 호출을 보호합니다.</li>
+        </ul>
+        <p><strong>보관 기간:</strong></p>
+        <ul>
+          <li>계정 활성 기간 동안 데이터를 보관합니다.</li>
+          <li>건강 데이터는 여러분의 계정에만 저장되며, 외부로 공유되지 않습니다.</li>
+          <li>계정 삭제 시 모든 데이터가 영구적으로 삭제됩니다.</li>
+        </ul>
+      </section>
+
+      <section id="user-rights">
+        <h2>6. 이용자의 권리</h2>
+        <p>개인정보보호법에 따라 여러분은 다음 권리를 가집니다:</p>
+        <ul>
+          <li><strong>열람 요청:</strong> 본인의 개인정보를 확인할 수 있습니다 (앱 내 프로필 페이지).</li>
+          <li><strong>정보 수정:</strong> 잘못된 정보를 수정하거나 업데이트할 수 있습니다.</li>
+          <li><strong>계정 삭제:</strong> 계정을 삭제하면 모든 데이터가 영구적으로 삭제됩니다. (설정 > 계정 관리)</li>
+          <li><strong>동의 철회:</strong> 워치 동기화 등의 기능을 언제든지 끌 수 있습니다.</li>
+          <li><strong>데이터 이동권:</strong> 본인의 데이터를 다른 서비스로 이동할 권리가 있습니다.</li>
+        </ul>
+        <p>권리 행사가 필요하시면 아래 연락처로 문의해 주세요.</p>
+      </section>
+
+      <section id="retention">
+        <h2>7. 데이터 보관 및 파기</h2>
+        <ul>
+          <li><strong>활성 계정:</strong> 계정을 사용하는 동안 데이터를 보관합니다.</li>
+          <li><strong>계정 삭제 시:</strong> 삭제 요청 후 즉시 모든 데이터를 영구 삭제합니다.</li>
+          <li><strong>건강 동기화 데이터:</strong> 워치 동기화를 끄면 새로운 데이터 수집이 중단되며, 기존 데이터는 계정 삭제 시 함께 삭제됩니다.</li>
+        </ul>
+      </section>
+
+      <section id="children">
+        <h2>8. 아동의 개인정보</h2>
+        <p>
+          해브투런 앱은 만 14세 미만 아동을 대상으로 하지 않습니다.
+          만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않으며,
+          발견 시 즉시 삭제합니다.
+        </p>
+      </section>
+
+      <section id="policy-changes">
+        <h2>9. 처리방침 변경</h2>
+        <p>
+          이 개인정보 처리방침은 관련 법률 및 서비스 변경에 따라 업데이트될 수 있습니다.
+        </p>
+        <ul>
+          <li><strong>중요한 변경 사항:</strong> 앱 내 알림 및 이메일로 사전 통보합니다.</li>
+          <li><strong>경미한 변경 사항:</strong> 본 페이지에 업데이트하며, "최종 업데이트" 날짜를 갱신합니다.</li>
+        </ul>
+        <p>변경 사항은 공지 후 7일 뒤에 효력이 발생합니다.</p>
+      </section>
+
+      <section id="contact">
+        <h2>10. 문의</h2>
+        <p>개인정보 처리방침에 관한 문의 사항이 있으시면 언제든지 연락 주세요:</p>
+        <ul>
+          <li><strong>이메일:</strong> <a href="mailto:privacy@have2run.com">privacy@have2run.com</a></li>
+        </ul>
+      </section>
+
+      <section id="hosting">
+        <h2>11. GitHub Pages 호스팅 안내</h2>
+        <p>
+          이 개인정보 처리방침 페이지는 GitHub Pages에서 호스팅됩니다.
+          GitHub는 보안 목적으로 방문자의 IP 주소를 수집할 수 있습니다.
+          자세한 내용은 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank">GitHub 개인정보 처리방침</a>을 참조하세요.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Have2Run. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
