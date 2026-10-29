@@ -10,7 +10,7 @@
   <div class="container">
     <header>
       <h1>해브투런 개인정보 처리방침</h1>
-      <p class="last-updated">최종 업데이트: 2026년 4월 1일</p>
+      <p class="last-updated">최종 업데이트: 2026년 10월 29일</p>
       <div class="lang-switch">
         <a href="en/">English</a>
       </div>
@@ -21,7 +21,7 @@
         <h2>1. 소개</h2>
         <p>
           안녕하세요! 해브투런(Have2Run) 앱을 이용해 주셔서 감사합니다.
-          우리는 여러분의 러닝 목표 달성을 돕기 위해 AI 코칭과 훈련 관리 서비스를 제공합니다.
+          해브투런은 러닝화별 누적 거리(마일리지)를 기록해 새 신발로 바꿀 때를 알려주는 앱입니다.
         </p>
         <p>
           이 개인정보 처리방침은 해브투런 앱이 어떤 정보를 수집하고, 어떻게 사용하며,
@@ -32,74 +32,68 @@
       <section id="data-collection">
         <h2>2. 수집하는 정보</h2>
 
-        <h3>2.1 건강 및 피트니스 데이터</h3>
+        <h3>2.1 신발 및 러닝 기록</h3>
         <p><strong>수집 항목:</strong></p>
         <ul>
-          <li>워크아웃 데이터 (러닝 기록)</li>
-          <li>거리 (Distance)</li>
-          <li>심박수 (Heart Rate)</li>
-          <li>소모 칼로리 (Active Calories Burned)</li>
-          <li>걸음 수 (Steps)</li>
+          <li>신발 정보: 브랜드, 모델명, 별명, 수명 거리(km), 시작 마일리지, 은퇴 여부 및 은퇴일</li>
+          <li>신발 사진 (직접 촬영하거나 선택해 올린 경우에만)</li>
+          <li>러닝 기록: 거리, 시작 시각, 신은 신발, 기록 출처(Apple 건강 / Health Connect / Strava / 직접 입력), 중복 방지를 위한 외부 기록 ID</li>
+          <li>카탈로그 이미지 신고 내역 ("다른 신발 같아요")</li>
         </ul>
-        <p><strong>수집 출처:</strong> iOS의 HealthKit 또는 Android의 Health Connect를 통해 스마트워치 데이터를 읽어옵니다 (읽기 전용 권한).</p>
-        <p><strong>사용 목적:</strong> 훈련 세션 자동 완료, 레이스 기록 예측, 진행 상황 추적, AI 코칭 개인화</p>
-        <p><strong>제어 방법:</strong> 앱 설정에서 워치 동기화를 언제든지 켜거나 끌 수 있습니다.</p>
+        <p><strong>수집 출처:</strong> 직접 입력하거나, 감지된 러닝 알림에서 신발을 골라 저장할 때 기록됩니다.</p>
+        <p><strong>사용 목적:</strong> 신발별 누적 거리 계산, 교체 시점 안내, 기록 캘린더 표시</p>
 
-        <h3>2.2 프로필 정보</h3>
+        <h3>2.2 건강 및 피트니스 데이터 (Apple 건강 / Health Connect)</h3>
+        <p><strong>권한:</strong> iOS의 HealthKit(Apple 건강) 또는 Android의 Health Connect에 대한 <strong>읽기 전용</strong> 권한만 요청합니다. 앱은 건강 데이터를 쓰거나 수정하지 않습니다.</p>
+        <p><strong>요청하는 읽기 권한:</strong> 운동(워크아웃), 거리, 심박수, 활동 칼로리, 걸음 수 (Android는 속도 포함)</p>
+        <p><strong>실제로 사용하는 항목:</strong></p>
+        <ul>
+          <li>운동 종류 (러닝인지 여부 — 걷기·사이클 등은 무시)</li>
+          <li>거리</li>
+          <li>운동 시작 시각</li>
+        </ul>
+        <p><strong>사용 목적:</strong> 워치로 마친 러닝을 감지해 "어떤 신발 신었어요?" 알림을 보내고, 여러분이 신발을 골라 저장하면 러닝 기록을 남기는 데에만 사용합니다.</p>
+        <p><strong>보관:</strong> 여러분이 저장한 러닝 기록(거리, 시작 시각, 출처)만 서버에 보관합니다. 심박수 등 그 밖의 건강 데이터는 서버로 전송하거나 저장하지 않으며, 알림을 무시한 러닝은 기록하지 않습니다.</p>
+        <p><strong>제한 사항:</strong></p>
+        <ul>
+          <li>건강 데이터는 광고나 마케팅에 절대 사용하지 않습니다.</li>
+          <li>건강 데이터를 판매하거나 제3자와 공유하지 않습니다.</li>
+        </ul>
+        <p><strong>제어 방법:</strong> 앱 설정에서 감지 소스를 바꾸거나, 기기의 건강 앱(iOS 설정 &gt; 건강 / Health Connect)에서 언제든지 권한을 철회할 수 있습니다.</p>
+
+        <h3>2.3 Strava 연동 (선택)</h3>
         <p><strong>수집 항목:</strong></p>
         <ul>
-          <li>이름</li>
-          <li>이메일 주소</li>
-          <li>키, 몸무게</li>
-          <li>개인 기록 (PB: Personal Best)</li>
-          <li>시간 선호 (오전/오후)</li>
+          <li>Strava 계정 ID, OAuth 액세스·리프레시 토큰, 토큰 만료 시각, 권한 범위</li>
+          <li>새 활동의 종류, 거리, 시작 시각 (러닝 감지 알림을 위해 조회)</li>
         </ul>
-        <p><strong>수집 출처:</strong> 회원가입 시 직접 입력하거나 프로필 설정에서 업데이트</p>
-        <p><strong>사용 목적:</strong> 맞춤형 훈련 계획 생성, 레이스 예측, AI 코칭 개인화</p>
+        <p><strong>사용 목적:</strong> Strava에 새 러닝이 올라오면 기록할지 묻는 알림을 보내기 위해서만 사용합니다. 여러분이 신발을 골라 저장한 경우에만 러닝 기록으로 남습니다.</p>
+        <p><strong>보관:</strong> 토큰은 서버 전용 저장소에 보관되며 앱(클라이언트)에서는 읽을 수 없습니다.</p>
+        <p><strong>제어 방법:</strong> 앱 설정에서 언제든지 Strava 연결을 해제할 수 있습니다. 해제 시 Strava 측 권한을 취소하고 저장된 토큰을 지웁니다.</p>
 
-        <h3>2.3 훈련 데이터</h3>
-        <p><strong>수집 항목:</strong></p>
-        <ul>
-          <li>훈련 세션 기록 (날짜, 거리, 페이스, 메모)</li>
-          <li>훈련 스케줄 및 목표</li>
-          <li>운동 사진 (스크린샷 업로드 시)</li>
-          <li>AI 코치와의 대화 내용</li>
-        </ul>
-        <p><strong>수집 출처:</strong> 직접 입력하거나 AI 코치가 생성</p>
-        <p><strong>사용 목적:</strong> 훈련 관리, AI 코칭 제공, 진행 상황 추적 및 분석</p>
-
-        <h3>2.4 인증 정보</h3>
+        <h3>2.4 계정 및 프로필 정보</h3>
         <p><strong>수집 항목:</strong></p>
         <ul>
           <li>이메일/비밀번호 (이메일 가입 시)</li>
           <li>소셜 로그인 정보 (Google, Apple, Kakao): 이름, 이메일, 프로필 사진</li>
+          <li>선택한 러닝 감지 소스 (Apple 건강 / Health Connect / Strava / 없음)</li>
         </ul>
         <p><strong>관리 주체:</strong> Supabase Auth</p>
-        <p><strong>사용 목적:</strong> 계정 인증 및 관리</p>
+        <p><strong>사용 목적:</strong> 계정 인증 및 관리, 기기 간 데이터 동기화</p>
 
-        <h3>2.5 AI 코칭 데이터</h3>
-        <p><strong>수집 항목:</strong></p>
-        <ul>
-          <li>프로필 정보 (키, 몸무게, 러닝 레벨)</li>
-          <li>훈련 기록 (거리, 시간, 페이스, 심박수)</li>
-          <li>대회 목표 (대회명, 목표 시간, 개인 기록)</li>
-          <li>AI 코치와의 대화 내용</li>
-          <li>업로드한 운동 스크린샷</li>
-        </ul>
-        <p><strong>처리 주체:</strong> Google Gemini AI (Google LLC), OpenRouter (Grok, DeepSeek 등 보조 AI 제공자)</p>
-        <p><strong>사용 목적:</strong> 맞춤형 훈련 조언, 대화형 코칭 제공</p>
-        <p><strong>동의 절차:</strong> AI 코치 기능 최초 사용 시 앱 내에서 데이터 공유 동의를 받으며, 동의 전까지 AI 기능이 차단됩니다. 전송된 데이터는 AI 응답 생성에만 사용됩니다.</p>
+        <h3>2.5 푸시 알림 토큰</h3>
+        <p><strong>수집 항목:</strong> 기기의 푸시 알림 토큰 (Firebase Cloud Messaging), 알림 수신 여부 설정</p>
+        <p><strong>사용 목적:</strong> Strava 러닝 감지 알림 등 앱 알림 전송. 로그아웃하면 토큰을 지웁니다.</p>
 
         <h3>2.6 이용 분석 및 진단 데이터</h3>
         <p><strong>수집 항목:</strong></p>
         <ul>
-          <li>앱 사용 패턴 (화면 조회, 기능 사용)</li>
+          <li>기본 앱 사용 통계 (앱 실행, 세션 등 Firebase가 자동으로 수집하는 이벤트)</li>
           <li>크래시 리포트 (오류 로그, 스택 트레이스)</li>
-          <li>성능 데이터 (앱 로딩 시간, 응답 속도)</li>
         </ul>
         <p><strong>처리 주체:</strong> Google Firebase (Analytics, Crashlytics)</p>
-        <p><strong>사용 목적:</strong> 앱 개선, 버그 수정, 성능 최적화</p>
-        <p><strong>익명화:</strong> 분석 데이터는 개인 식별이 불가능한 형태로 수집됩니다.</p>
+        <p><strong>사용 목적:</strong> 앱 안정성 확인, 버그 수정</p>
+        <p><strong>익명화:</strong> 분석 데이터는 개인 식별이 불가능한 형태로 수집되며, 건강 데이터는 포함되지 않습니다.</p>
 
         <h3>2.7 기기 정보</h3>
         <p><strong>수집 항목:</strong></p>
@@ -116,17 +110,18 @@
         <h2>3. 정보 이용 목적</h2>
         <p>우리는 수집한 정보를 다음 목적으로만 사용합니다:</p>
         <ul>
-          <li><strong>맞춤형 훈련 제공:</strong> AI 코치가 여러분의 목표와 현재 상태에 맞는 훈련 계획을 생성합니다.</li>
-          <li><strong>레이스 기록 예측:</strong> 과거 훈련 데이터를 분석하여 목표 레이스의 예상 기록을 제공합니다.</li>
-          <li><strong>진행 상황 추적:</strong> 훈련 통계와 그래프로 발전 과정을 시각화합니다.</li>
-          <li><strong>앱 개선:</strong> 사용 패턴 분석을 통해 더 나은 사용자 경험을 제공합니다.</li>
+          <li><strong>마일리지 관리:</strong> 신발별 누적 거리를 계산하고 남은 거리를 보여줍니다.</li>
+          <li><strong>러닝 감지 및 기록:</strong> 워치나 Strava에서 마친 러닝을 감지해 알림을 보내고, 선택한 신발에 기록합니다.</li>
+          <li><strong>교체 시점 안내:</strong> 신발 수명이 가까워지면 알려드립니다.</li>
+          <li><strong>앱 개선:</strong> 크래시와 기본 사용 통계로 안정성을 높입니다.</li>
           <li><strong>고객 지원:</strong> 문의 사항에 답변하고 기술적 문제를 해결합니다.</li>
         </ul>
         <p><strong>명시적 금지 사항:</strong></p>
         <ul>
           <li>❌ 마케팅 또는 광고 목적으로 사용하지 않습니다.</li>
           <li>❌ 제3자에게 판매하거나 임대하지 않습니다.</li>
-          <li>❌ 건강 데이터를 마케팅 목적으로 공유하지 않습니다.</li>
+          <li>❌ 건강 데이터를 광고·마케팅에 사용하거나 제3자와 공유하지 않습니다.</li>
+          <li>❌ 여러분의 개인정보나 러닝 기록을 AI 모델에 보내지 않습니다.</li>
         </ul>
       </section>
 
@@ -147,7 +142,7 @@
           <tbody>
             <tr>
               <td><strong>Supabase</strong></td>
-              <td>백엔드 데이터베이스, 인증, 파일 저장소</td>
+              <td>백엔드 데이터베이스, 인증, 파일 저장소 (신발·러닝 기록, 신발 사진, Strava 토큰)</td>
               <td><a href="https://supabase.com/privacy" target="_blank">링크</a></td>
             </tr>
             <tr>
@@ -156,14 +151,14 @@
               <td><a href="https://firebase.google.com/support/privacy" target="_blank">링크</a></td>
             </tr>
             <tr>
-              <td><strong>Google Gemini AI</strong></td>
-              <td>AI 코칭 대화 처리</td>
-              <td><a href="https://policies.google.com/privacy" target="_blank">링크</a></td>
+              <td><strong>Strava</strong></td>
+              <td>러닝 감지 (연동한 경우에만)</td>
+              <td><a href="https://www.strava.com/legal/privacy" target="_blank">링크</a></td>
             </tr>
             <tr>
-              <td><strong>OpenRouter</strong></td>
-              <td>AI 코칭 보조 제공자 (Grok, DeepSeek 등)</td>
-              <td><a href="https://openrouter.ai/privacy" target="_blank">링크</a></td>
+              <td><strong>Google Gemini AI</strong></td>
+              <td>신발 카탈로그 일러스트 생성. 신발 브랜드·모델명과 공개된 상품 이미지만 전송하며, 사용자 데이터는 전송하지 않습니다.</td>
+              <td><a href="https://policies.google.com/privacy" target="_blank">링크</a></td>
             </tr>
             <tr>
               <td><strong>Google / Apple / Kakao</strong></td>
@@ -179,13 +174,15 @@
         <p><strong>보안 조치:</strong></p>
         <ul>
           <li><strong>전송 암호화:</strong> 모든 데이터는 HTTPS를 통해 암호화되어 전송됩니다.</li>
-          <li><strong>접근 제어:</strong> Supabase Row Level Security (RLS) 정책으로 데이터 접근을 제한합니다.</li>
+          <li><strong>접근 제어:</strong> Supabase Row Level Security (RLS) 정책으로 본인의 신발·러닝 기록에만 접근할 수 있습니다.</li>
+          <li><strong>토큰 보호:</strong> Strava 토큰은 서버에서만 접근 가능한 저장소에 보관합니다.</li>
           <li><strong>앱 인증:</strong> Firebase App Check로 API 호출을 보호합니다.</li>
         </ul>
+        <p><strong>신발 사진:</strong> 업로드한 신발 사진은 앱에 표시하기 위해 추측하기 어려운 고유 주소로 저장되며, 그 주소를 아는 사람은 사진을 볼 수 있습니다. 얼굴 등 개인을 알아볼 수 있는 내용이 담긴 사진은 올리지 말아 주세요.</p>
         <p><strong>보관 기간:</strong></p>
         <ul>
           <li>계정 활성 기간 동안 데이터를 보관합니다.</li>
-          <li>건강 데이터는 여러분의 계정에만 저장되며, 외부로 공유되지 않습니다.</li>
+          <li>건강 데이터는 저장한 러닝 기록(거리, 시작 시각, 출처) 형태로만 여러분의 계정에 남으며, 외부로 공유되지 않습니다.</li>
           <li>계정 삭제 시 모든 데이터가 영구적으로 삭제됩니다.</li>
         </ul>
       </section>
@@ -194,10 +191,10 @@
         <h2>6. 이용자의 권리</h2>
         <p>개인정보보호법에 따라 여러분은 다음 권리를 가집니다:</p>
         <ul>
-          <li><strong>열람 요청:</strong> 본인의 개인정보를 확인할 수 있습니다 (앱 내 프로필 페이지).</li>
-          <li><strong>정보 수정:</strong> 잘못된 정보를 수정하거나 업데이트할 수 있습니다.</li>
-          <li><strong>계정 삭제:</strong> 계정을 삭제하면 모든 데이터가 영구적으로 삭제됩니다. (설정 > 계정 관리)</li>
-          <li><strong>동의 철회:</strong> 워치 동기화 등의 기능을 언제든지 끌 수 있습니다. AI 데이터 동의도 앱 설정에서 철회할 수 있으며, 철회 시 AI 코치 기능이 비활성화됩니다.</li>
+          <li><strong>열람 요청:</strong> 본인의 신발과 러닝 기록을 앱에서 언제든 확인할 수 있습니다.</li>
+          <li><strong>정보 수정:</strong> 신발 정보와 러닝 기록을 수정하거나 삭제할 수 있습니다.</li>
+          <li><strong>계정 삭제:</strong> 계정을 삭제하면 모든 데이터가 영구적으로 삭제됩니다. (설정 &gt; 계정)</li>
+          <li><strong>동의 철회:</strong> 건강 데이터 권한은 기기 설정에서, Strava 연결은 앱 설정에서 언제든지 해제할 수 있습니다. 푸시 알림도 앱 설정이나 기기 설정에서 끌 수 있습니다.</li>
           <li><strong>데이터 이동권:</strong> 본인의 데이터를 다른 서비스로 이동할 권리가 있습니다.</li>
         </ul>
         <p>권리 행사가 필요하시면 아래 연락처로 문의해 주세요.</p>
@@ -207,8 +204,10 @@
         <h2>7. 데이터 보관 및 파기</h2>
         <ul>
           <li><strong>활성 계정:</strong> 계정을 사용하는 동안 데이터를 보관합니다.</li>
-          <li><strong>계정 삭제 시:</strong> 삭제 요청 후 즉시 모든 데이터를 영구 삭제합니다.</li>
-          <li><strong>건강 동기화 데이터:</strong> 워치 동기화를 끄면 새로운 데이터 수집이 중단되며, 기존 데이터는 계정 삭제 시 함께 삭제됩니다.</li>
+          <li><strong>계정 삭제 시:</strong> 삭제 요청 후 즉시 프로필, 신발, 러닝 기록, 업로드한 신발 사진, Strava 연결 정보, 푸시 토큰을 영구 삭제합니다.</li>
+          <li><strong>개별 삭제:</strong> 러닝 기록이나 신발을 삭제하면 해당 데이터가 바로 삭제됩니다.</li>
+          <li><strong>건강 데이터 연동 해제:</strong> 권한을 철회하거나 감지 소스를 바꾸면 새로운 러닝 감지가 중단되며, 이미 저장한 러닝 기록은 계정 삭제 시 함께 삭제됩니다.</li>
+          <li><strong>Strava 연결 해제:</strong> 해제 즉시 Strava 권한을 취소하고 저장된 토큰을 지웁니다.</li>
         </ul>
       </section>
 

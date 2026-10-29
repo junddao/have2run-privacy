@@ -10,7 +10,7 @@
   <div class="container">
     <header>
       <h1>Have2Run Privacy Policy</h1>
-      <p class="last-updated">Last Updated: April 1, 2026</p>
+      <p class="last-updated">Last Updated: October 29, 2026</p>
       <div class="lang-switch">
         <a href="../">한국어</a>
       </div>
@@ -20,8 +20,8 @@
       <section id="intro">
         <h2>1. Introduction</h2>
         <p>
-          Thank you for using Have2Run! We provide AI coaching and training management services
-          to help you achieve your running goals.
+          Thank you for using Have2Run! Have2Run tracks the mileage of each of your running shoes
+          and lets you know when it is time for a new pair.
         </p>
         <p>
           This Privacy Policy explains what information Have2Run collects, how we use it,
@@ -32,74 +32,68 @@
       <section id="data-collection">
         <h2>2. Data We Collect</h2>
 
-        <h3>2.1 Health & Fitness Data</h3>
+        <h3>2.1 Shoes & Run Records</h3>
         <p><strong>Data Types:</strong></p>
         <ul>
-          <li>Workout data (running sessions)</li>
+          <li>Shoe details: brand, model, nickname, lifespan (km), starting mileage, retired status and retirement date</li>
+          <li>Shoe photos (only if you take or choose one to upload)</li>
+          <li>Run records: distance, start time, the shoe you wore, source (Apple Health / Health Connect / Strava / manual entry), and an external record ID used to prevent duplicates</li>
+          <li>Catalog image reports ("This looks like a different shoe")</li>
+        </ul>
+        <p><strong>Source:</strong> You enter this data yourself, or it is recorded when you pick a shoe from a detected-run notification.</p>
+        <p><strong>Purpose:</strong> Calculate mileage per shoe, tell you when a shoe is near the end of its life, and show your run calendar.</p>
+
+        <h3>2.2 Health & Fitness Data (Apple Health / Health Connect)</h3>
+        <p><strong>Permissions:</strong> We request <strong>READ-only</strong> access to HealthKit (Apple Health) on iOS or Health Connect on Android. The app never writes or modifies your health data.</p>
+        <p><strong>Read permissions requested:</strong> workouts, distance, heart rate, active calories burned, steps (and speed on Android)</p>
+        <p><strong>What we actually use:</strong></p>
+        <ul>
+          <li>Workout type (whether it is a run — walks, rides, etc. are ignored)</li>
           <li>Distance</li>
-          <li>Heart Rate</li>
-          <li>Active Calories Burned</li>
-          <li>Steps</li>
+          <li>Workout start time</li>
         </ul>
-        <p><strong>Source:</strong> Read from your smartwatch via HealthKit (iOS) or Health Connect (Android) with READ-only permissions.</p>
-        <p><strong>Purpose:</strong> Automatically complete training sessions, predict race times, track progress, and personalize AI coaching.</p>
-        <p><strong>Control:</strong> You can enable or disable watch sync in Settings at any time.</p>
+        <p><strong>Purpose:</strong> Used only to detect a run you finished with your watch, send a "Which shoes did you wear?" notification, and record the run when you choose a shoe.</p>
+        <p><strong>Storage:</strong> Only the run record you save (distance, start time, source) is stored on our servers. Heart rate and other health data are never sent to or stored on our servers, and runs whose notification you ignore are not recorded.</p>
+        <p><strong>Restrictions:</strong></p>
+        <ul>
+          <li>Health data is never used for advertising or marketing.</li>
+          <li>Health data is never sold or shared with third parties.</li>
+        </ul>
+        <p><strong>Control:</strong> You can change the detection source in app Settings, or revoke access at any time in your device's health settings (iOS Settings &gt; Health / Health Connect).</p>
 
-        <h3>2.2 Profile Information</h3>
+        <h3>2.3 Strava Connection (Optional)</h3>
         <p><strong>Data Types:</strong></p>
         <ul>
-          <li>Name</li>
-          <li>Email address</li>
-          <li>Height, weight</li>
-          <li>Personal Best (PB) times</li>
-          <li>Time preference (AM/PM)</li>
+          <li>Strava athlete ID, OAuth access and refresh tokens, token expiry time, granted scope</li>
+          <li>Type, distance, and start time of new activities (read to offer recording)</li>
         </ul>
-        <p><strong>Source:</strong> You provide this information during sign-up or in profile settings.</p>
-        <p><strong>Purpose:</strong> Generate personalized training plans, predict race times, and customize AI coaching.</p>
+        <p><strong>Purpose:</strong> Used only to notify you when a new run appears on Strava so you can record it. A run is stored only if you choose a shoe and save it.</p>
+        <p><strong>Storage:</strong> Tokens are kept in server-only storage and cannot be read by the app (client).</p>
+        <p><strong>Control:</strong> You can disconnect Strava at any time in app Settings. Disconnecting revokes our access on Strava and deletes the stored tokens.</p>
 
-        <h3>2.3 Training Data</h3>
-        <p><strong>Data Types:</strong></p>
-        <ul>
-          <li>Training session records (date, distance, pace, notes)</li>
-          <li>Training schedules and goals</li>
-          <li>Workout images (when you upload screenshots)</li>
-          <li>Conversations with AI coach</li>
-        </ul>
-        <p><strong>Source:</strong> You create this data or our AI coach generates it for you.</p>
-        <p><strong>Purpose:</strong> Manage your training, provide AI coaching, track and analyze progress.</p>
-
-        <h3>2.4 Authentication Data</h3>
+        <h3>2.4 Account & Profile Information</h3>
         <p><strong>Data Types:</strong></p>
         <ul>
           <li>Email/password (for email sign-up)</li>
           <li>Social login information (Google, Apple, Kakao): name, email, profile picture</li>
+          <li>Your selected run detection source (Apple Health / Health Connect / Strava / none)</li>
         </ul>
         <p><strong>Managed by:</strong> Supabase Auth</p>
-        <p><strong>Purpose:</strong> Account authentication and management.</p>
+        <p><strong>Purpose:</strong> Account authentication and management, syncing your data across devices.</p>
 
-        <h3>2.5 AI Coaching Data</h3>
-        <p><strong>Data Types:</strong></p>
-        <ul>
-          <li>Profile information (height, weight, running level)</li>
-          <li>Training records (distance, time, pace, heart rate)</li>
-          <li>Race goals (race name, target time, personal bests)</li>
-          <li>Conversations with AI coach</li>
-          <li>Uploaded workout screenshots</li>
-        </ul>
-        <p><strong>Processed by:</strong> Google Gemini AI (Google LLC), OpenRouter (Grok, DeepSeek, and other fallback AI providers)</p>
-        <p><strong>Purpose:</strong> Provide personalized training advice and conversational coaching.</p>
-        <p><strong>Consent:</strong> Before first use of the AI Coach feature, the app displays a data-sharing consent dialog. AI features are blocked until you explicitly agree. Shared data is used solely for generating AI responses.</p>
+        <h3>2.5 Push Notification Token</h3>
+        <p><strong>Data Types:</strong> Your device's push notification token (Firebase Cloud Messaging) and your notification preference.</p>
+        <p><strong>Purpose:</strong> Deliver app notifications such as Strava run detection. The token is removed when you log out.</p>
 
         <h3>2.6 Usage & Diagnostics Data</h3>
         <p><strong>Data Types:</strong></p>
         <ul>
-          <li>App usage patterns (screen views, feature usage)</li>
+          <li>Basic app usage statistics (events Firebase collects automatically, such as app opens and sessions)</li>
           <li>Crash reports (error logs, stack traces)</li>
-          <li>Performance data (app loading time, response speed)</li>
         </ul>
         <p><strong>Processed by:</strong> Google Firebase (Analytics, Crashlytics)</p>
-        <p><strong>Purpose:</strong> Improve the app, fix bugs, and optimize performance.</p>
-        <p><strong>Anonymization:</strong> Analytics data is collected in a non-identifiable form.</p>
+        <p><strong>Purpose:</strong> Monitor app stability and fix bugs.</p>
+        <p><strong>Anonymization:</strong> Analytics data is collected in a non-identifiable form and never includes health data.</p>
 
         <h3>2.7 Device Information</h3>
         <p><strong>Data Types:</strong></p>
@@ -116,17 +110,18 @@
         <h2>3. How We Use Your Data</h2>
         <p>We use the collected information only for the following purposes:</p>
         <ul>
-          <li><strong>Personalized training:</strong> Our AI coach creates training plans tailored to your goals and current fitness level.</li>
-          <li><strong>Race time prediction:</strong> We analyze your training data to predict your performance in upcoming races.</li>
-          <li><strong>Progress tracking:</strong> We visualize your training progress with statistics and graphs.</li>
-          <li><strong>App improvement:</strong> We analyze usage patterns to provide a better user experience.</li>
+          <li><strong>Mileage tracking:</strong> We calculate the total distance on each shoe and show how much is left.</li>
+          <li><strong>Run detection & recording:</strong> We detect runs finished on your watch or Strava, notify you, and record them on the shoe you choose.</li>
+          <li><strong>Replacement reminders:</strong> We let you know when a shoe is nearing the end of its lifespan.</li>
+          <li><strong>App improvement:</strong> We use crash reports and basic usage statistics to improve stability.</li>
           <li><strong>Customer support:</strong> We respond to your inquiries and resolve technical issues.</li>
         </ul>
         <p><strong>What We Don't Do:</strong></p>
         <ul>
           <li>❌ We do NOT use your data for marketing or advertising.</li>
           <li>❌ We do NOT sell or rent your data to third parties.</li>
-          <li>❌ We do NOT share health data for marketing purposes.</li>
+          <li>❌ We do NOT use health data for advertising or marketing, or share it with third parties.</li>
+          <li>❌ We do NOT send your personal information or run records to AI models.</li>
         </ul>
       </section>
 
@@ -147,7 +142,7 @@
           <tbody>
             <tr>
               <td><strong>Supabase</strong></td>
-              <td>Backend database, authentication, file storage</td>
+              <td>Backend database, authentication, file storage (shoe and run records, shoe photos, Strava tokens)</td>
               <td><a href="https://supabase.com/privacy" target="_blank">Link</a></td>
             </tr>
             <tr>
@@ -156,14 +151,14 @@
               <td><a href="https://firebase.google.com/support/privacy" target="_blank">Link</a></td>
             </tr>
             <tr>
-              <td><strong>Google Gemini AI</strong></td>
-              <td>AI coaching conversation processing</td>
-              <td><a href="https://policies.google.com/privacy" target="_blank">Link</a></td>
+              <td><strong>Strava</strong></td>
+              <td>Run detection (only if you connect it)</td>
+              <td><a href="https://www.strava.com/legal/privacy" target="_blank">Link</a></td>
             </tr>
             <tr>
-              <td><strong>OpenRouter</strong></td>
-              <td>Fallback AI coaching provider (Grok, DeepSeek, etc.)</td>
-              <td><a href="https://openrouter.ai/privacy" target="_blank">Link</a></td>
+              <td><strong>Google Gemini AI</strong></td>
+              <td>Generating shoe catalog illustrations. Only the shoe brand/model name and a publicly available product image are sent; no user data is sent.</td>
+              <td><a href="https://policies.google.com/privacy" target="_blank">Link</a></td>
             </tr>
             <tr>
               <td><strong>Google / Apple / Kakao</strong></td>
@@ -179,13 +174,15 @@
         <p><strong>Security Measures:</strong></p>
         <ul>
           <li><strong>Encryption in transit:</strong> All data is encrypted via HTTPS during transmission.</li>
-          <li><strong>Access control:</strong> Supabase Row Level Security (RLS) policies restrict data access.</li>
+          <li><strong>Access control:</strong> Supabase Row Level Security (RLS) policies ensure you can access only your own shoes and runs.</li>
+          <li><strong>Token protection:</strong> Strava tokens are stored where only our server can access them.</li>
           <li><strong>App authentication:</strong> Firebase App Check protects API calls.</li>
         </ul>
+        <p><strong>Shoe photos:</strong> Shoe photos you upload are stored at a unique, hard-to-guess address so the app can display them; anyone who has that address can view the photo. Please do not upload photos that show your face or other personally identifying content.</p>
         <p><strong>Retention Period:</strong></p>
         <ul>
           <li>We retain your data while your account is active.</li>
-          <li>Health data is stored only in your account and is not shared externally.</li>
+          <li>Health data remains in your account only as the run records you save (distance, start time, source) and is not shared externally.</li>
           <li>When you delete your account, all data is permanently deleted.</li>
         </ul>
       </section>
@@ -194,10 +191,10 @@
         <h2>6. Your Rights</h2>
         <p>Under privacy laws, you have the following rights:</p>
         <ul>
-          <li><strong>Access:</strong> You can view your personal information (in-app profile page).</li>
-          <li><strong>Correction:</strong> You can correct or update incorrect information.</li>
-          <li><strong>Deletion:</strong> You can delete your account, which permanently deletes all data. (Settings > Account Management)</li>
-          <li><strong>Withdraw consent:</strong> You can disable features like watch sync at any time. You can also withdraw AI data consent in app settings, which will disable the AI Coach feature.</li>
+          <li><strong>Access:</strong> You can view your shoes and run records in the app at any time.</li>
+          <li><strong>Correction:</strong> You can edit or delete shoe details and run records.</li>
+          <li><strong>Deletion:</strong> You can delete your account, which permanently deletes all data. (Settings &gt; Account)</li>
+          <li><strong>Withdraw consent:</strong> You can revoke health data access in your device settings and disconnect Strava in app Settings at any time. Push notifications can be turned off in app or device settings.</li>
           <li><strong>Data portability:</strong> You have the right to move your data to another service.</li>
         </ul>
         <p>To exercise these rights, please contact us using the information below.</p>
@@ -207,8 +204,10 @@
         <h2>7. Data Retention & Deletion</h2>
         <ul>
           <li><strong>Active accounts:</strong> We retain your data while you use the app.</li>
-          <li><strong>Account deletion:</strong> Upon deletion request, all data is immediately and permanently deleted.</li>
-          <li><strong>Health sync data:</strong> If you disable watch sync, we stop collecting new data. Existing data will be deleted when you delete your account.</li>
+          <li><strong>Account deletion:</strong> Upon deletion request, your profile, shoes, run records, uploaded shoe photos, Strava connection, and push token are immediately and permanently deleted.</li>
+          <li><strong>Individual deletion:</strong> When you delete a run or a shoe, that data is deleted right away.</li>
+          <li><strong>Health data disconnection:</strong> If you revoke access or change the detection source, we stop detecting new runs. Run records you already saved are deleted when you delete your account.</li>
+          <li><strong>Strava disconnection:</strong> Disconnecting immediately revokes our Strava access and deletes the stored tokens.</li>
         </ul>
       </section>
 
