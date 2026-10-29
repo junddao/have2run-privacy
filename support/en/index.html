@@ -10,7 +10,7 @@
   <div class="container">
     <header>
       <h1>Have2Run Support</h1>
-      <p class="last-updated">Last Updated: February 8, 2026</p>
+      <p class="last-updated">Last Updated: October 29, 2026</p>
       <div class="lang-switch">
         <a href="../">한국어</a>
       </div>
@@ -34,71 +34,74 @@
 
         <h3>Q. I forgot my password</h3>
         <p>
-          Tap "Forgot Password" on the login screen and enter the email you used to sign up.
-          A password reset link will be sent to your email.
+          Please contact <a href="mailto:support@have2run.com">support@have2run.com</a> with the email address you signed up with.
+          If you signed up with Google, Apple, or Kakao, simply sign in with that account again.
         </p>
 
         <h3>Q. I want to delete my account</h3>
         <p>
-          You can delete your account at More tab > Account Management > Delete Account.
-          All data will be permanently deleted and cannot be recovered.
-          See our <a href="../../data-deletion/en/">Data Deletion Guide</a> for details.
+          Go to the Settings tab and tap <strong>Delete Account</strong> at the bottom.
+          All your data, including shoes, run records, uploaded shoe photos, and your Strava connection, is permanently deleted and cannot be recovered.
+          For details, see <a href="../../data-deletion/en/">Data Deletion</a>.
         </p>
 
         <h3>Q. I want to change my social login account</h3>
         <p>
-          Changing social login accounts is not currently supported.
+          Changing your social login account is not currently supported.
           To use a different account, please delete your existing account and sign up again.
         </p>
 
-        <h3>AI Coaching</h3>
+        <h3>Run Detection</h3>
 
-        <h3>Q. The AI coach is not responding</h3>
+        <h3>Q. How does run detection work?</h3>
         <p>
-          Please check your network connection. AI coaching requires an internet connection.
-          If the issue persists, restart the app or contact <a href="mailto:support@have2run.com">support@have2run.com</a>.
+          When you finish a run with your watch (Garmin, Suunto, etc.), the watch maker's app saves it to Apple Health (iOS) or Health Connect (Android).
+          Have2Run detects it and sends a "Which shoes did you wear?" notification. Tap it, pick a shoe, and confirm to record the run.
+          You can also use Strava for detection instead of your watch.
+        </p>
+        <p>
+          Only <strong>one detection source</strong> can be active at a time: Apple Health, Health Connect, or Strava.
+          Turning one on turns the others off. You can switch in Settings &gt; Watch Sync.
+          Runs whose notification you ignore are not recorded, so add them manually if needed.
         </p>
 
-        <h3>Q. The AI coach's training plan doesn't suit me</h3>
-        <p>
-          Make sure your current fitness level and goals are accurately set in your profile.
-          You can ask the AI coach directly, like "lower the training intensity"
-          or "give me an easier plan" for personalized adjustments.
-        </p>
-
-        <h3>Watch Sync</h3>
-
-        <h3>Q. Watch data is not syncing</h3>
+        <h3>Q. I ran but didn't get a notification</h3>
         <p>Please check the following:</p>
         <ol>
-          <li>Make sure sync is enabled in More > Settings > Watch Sync</li>
-          <li>iOS: Check that Have2Run has permission in Settings > Health > Data Access</li>
-          <li>Android: Check that Have2Run has permission in Settings > Health Connect</li>
-          <li>Verify that running data is recorded in your device's health app</li>
+          <li>In your watch maker's app (Garmin Connect, Suunto, etc.), Apple Health / Health Connect sharing is on and the run has synced to the watch app</li>
+          <li>iOS: Settings &gt; Health &gt; Data Access &amp; Devices &gt; Have2Run allows reading workouts and distance</li>
+          <li>Android: Health Connect &gt; App permissions &gt; Have2Run allows reading exercise and distance, plus <strong>access data in the background</strong> (Android checks for new runs about every 15 minutes)</li>
+          <li>If you use Strava: Strava is connected in the Settings tab and the activity has been uploaded to Strava</li>
+          <li>Notifications for Have2Run are allowed in your device settings</li>
         </ol>
+        <p>The connection guide under Settings &gt; Watch Sync can check whether your recent runs are being detected.</p>
 
-        <h3>Q. I want to turn off watch sync</h3>
+        <h3>Q. How do I record a run manually?</h3>
         <p>
-          You can disable the sync toggle in More tab > Settings > Watch Sync.
-          Turning off sync stops new data collection.
+          In the <strong>Records</strong> tab, tap <strong>Add Run</strong> and enter the date, distance, and shoe.
+          You can also tap a date in the Records tab to edit or delete that day's runs.
         </p>
 
-        <h3>Training Management</h3>
+        <h3>Shoes</h3>
 
-        <h3>Q. I completed my training but it wasn't recorded</h3>
+        <h3>Q. What does "명분 완성" (Excuse Unlocked) mean?</h3>
         <p>
-          You can record training completion through:
+          When a shoe reaches its lifespan distance, we celebrate with "명분 완성! 새 신발 사도 돼요 🎉" — you've earned a reason to buy new shoes.
+          In Have2Run, replacing shoes isn't a warning; it's a moment to celebrate.
+          Retire the shoe from its detail screen to move it to the Hall of Fame (retired shoes) and register your new pair right away.
         </p>
-        <ul>
-          <li>Tell the AI coach "I completed today's training"</li>
-          <li>Automatic smartwatch sync (when watch sync is enabled)</li>
-          <li>Send a workout screenshot to the AI coach</li>
-        </ul>
 
-        <h3>Q. I want to edit a training record</h3>
+        <h3>Q. The shoe illustration doesn't match my shoe</h3>
         <p>
-          Just tell the AI coach "edit yesterday's training record."
-          You can modify distance, time, pace, and other details.
+          Catalog illustrations are generated automatically from public product information and may differ from the real shoe.
+          Open the shoe's detail screen, tap the menu at the top right, and choose <strong>다른 신발 같아요</strong> (Looks like a different shoe).
+          Once enough reports come in, the illustration is regenerated. You can also replace it with your own photo.
+        </p>
+
+        <h3>Q. How do I change a shoe's lifespan?</h3>
+        <p>
+          Use the menu at the top right of the shoe's detail screen to change its lifespan distance.
+          The default lifespan for new shoes is set in Settings &gt; Default Lifespan.
         </p>
       </section>
 
@@ -110,7 +113,7 @@
         </p>
         <ul>
           <li>Device model (e.g., iPhone 15, Galaxy S24)</li>
-          <li>App version (visible at the bottom of the More tab)</li>
+          <li>App version</li>
           <li>Description of the issue</li>
           <li>Screenshots (if possible)</li>
         </ul>

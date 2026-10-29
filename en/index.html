@@ -44,16 +44,16 @@
         <p><strong>Purpose:</strong> Calculate mileage per shoe, tell you when a shoe is near the end of its life, and show your run calendar.</p>
 
         <h3>2.2 Health & Fitness Data (Apple Health / Health Connect)</h3>
-        <p><strong>Permissions:</strong> We request <strong>READ-only</strong> access to HealthKit (Apple Health) on iOS or Health Connect on Android. The app never writes or modifies your health data.</p>
-        <p><strong>Read permissions requested:</strong> workouts, distance, heart rate, active calories burned, steps (and speed on Android)</p>
-        <p><strong>What we actually use:</strong></p>
+        <p><strong>Permissions:</strong> We request <strong>READ-only</strong> access to HealthKit (Apple Health) on iOS or Health Connect on Android. The app never writes to or modifies Apple Health or Health Connect.</p>
+        <p><strong>Read permissions requested:</strong> workouts and distance only. On Android, we also request background read access so new runs can be detected while the app is closed.</p>
+        <p><strong>What we use:</strong></p>
         <ul>
           <li>Workout type (whether it is a run — walks, rides, etc. are ignored)</li>
           <li>Distance</li>
           <li>Workout start time</li>
         </ul>
         <p><strong>Purpose:</strong> Used only to detect a run you finished with your watch, send a "Which shoes did you wear?" notification, and record the run when you choose a shoe.</p>
-        <p><strong>Storage:</strong> Only the run record you save (distance, start time, source) is stored on our servers. Heart rate and other health data are never sent to or stored on our servers, and runs whose notification you ignore are not recorded.</p>
+        <p><strong>Storage:</strong> Only the run record you save (distance, start time, source) is stored on our servers. We do not read any other health data, and runs whose notification you ignore are not recorded.</p>
         <p><strong>Restrictions:</strong></p>
         <ul>
           <li>Health data is never used for advertising or marketing.</li>

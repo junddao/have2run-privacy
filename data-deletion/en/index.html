@@ -10,7 +10,7 @@
   <div class="container">
     <header>
       <h1>Have2Run Data Deletion Guide</h1>
-      <p class="last-updated">Last Updated: February 8, 2026</p>
+      <p class="last-updated">Last Updated: October 29, 2026</p>
       <div class="lang-switch">
         <a href="../">한국어</a>
       </div>
@@ -30,9 +30,8 @@
         <p>You can delete your account directly from the app:</p>
         <ol>
           <li>Open the Have2Run app</li>
-          <li>Go to the <strong>More</strong> tab</li>
-          <li>Tap <strong>Account Management</strong></li>
-          <li>Tap <strong>Delete Account</strong></li>
+          <li>Go to the <strong>Settings</strong> tab</li>
+          <li>Tap <strong>Delete Account</strong> at the bottom</li>
           <li>Confirm deletion in the dialog</li>
         </ol>
         <p>
@@ -53,38 +52,43 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>Profile Information</strong></td>
-              <td>Name, email, height, weight, personal records</td>
-              <td>Immediate</td>
+              <td><strong>Profile</strong></td>
+              <td>Name, email, profile picture, selected run detection source</td>
+              <td>Immediately</td>
             </tr>
             <tr>
-              <td><strong>Training Data</strong></td>
-              <td>Training sessions, schedules, completion records</td>
-              <td>Immediate</td>
+              <td><strong>Shoes</strong></td>
+              <td>Brand, model, nickname, lifespan, starting mileage, including retired shoes</td>
+              <td>Immediately</td>
             </tr>
             <tr>
-              <td><strong>AI Coaching Conversations</strong></td>
-              <td>Chat history with AI coach</td>
-              <td>Immediate</td>
+              <td><strong>Run Records</strong></td>
+              <td>Distance, start time, source (Apple Health / Health Connect / Strava / manual)</td>
+              <td>Immediately</td>
             </tr>
             <tr>
-              <td><strong>Watch Sync Data</strong></td>
-              <td>Running records imported from smartwatch</td>
-              <td>Immediate</td>
+              <td><strong>Uploaded Shoe Photos</strong></td>
+              <td>Shoe photos you took or chose to upload</td>
+              <td>Immediately</td>
             </tr>
             <tr>
-              <td><strong>Uploaded Images</strong></td>
-              <td>Workout screenshots, profile photos</td>
-              <td>Immediate</td>
+              <td><strong>Strava Connection</strong></td>
+              <td>Strava athlete ID and authorization tokens</td>
+              <td>Immediately</td>
+            </tr>
+            <tr>
+              <td><strong>Push Notification Token</strong></td>
+              <td>Device notification token and notification preference</td>
+              <td>Immediately</td>
             </tr>
             <tr>
               <td><strong>Authentication Data</strong></td>
               <td>Account login information</td>
-              <td>Immediate</td>
+              <td>Immediately</td>
             </tr>
             <tr>
               <td><strong>Analytics Data</strong></td>
-              <td>Anonymized usage patterns (Firebase Analytics)</td>
+              <td>Anonymized usage statistics (Firebase Analytics)</td>
               <td>Up to 60 days</td>
             </tr>
           </tbody>
@@ -122,7 +126,8 @@
       <section id="third-party">
         <h2>6. Third-Party Service Data</h2>
         <p>
-          When you delete your account, all data on Have2Run servers is deleted.
+          When you delete your account, all data on Have2Run servers is deleted, including your Strava connection.
+          You can also review and revoke Have2Run's access in your Strava account settings.
           Social login (Google, Apple, Kakao) provider connections should be
           separately revoked in each service's settings.
         </p>
