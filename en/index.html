@@ -10,7 +10,7 @@
   <div class="container">
     <header>
       <h1>Have2Run Privacy Policy</h1>
-      <p class="last-updated">Last Updated: October 29, 2026</p>
+      <p class="last-updated">Last Updated: November 26, 2026</p>
       <div class="lang-switch">
         <a href="../">한국어</a>
       </div>
@@ -37,7 +37,7 @@
         <ul>
           <li>Shoe details: brand, model, nickname, lifespan (km), starting mileage, retired status and retirement date</li>
           <li>Shoe photos (only if you take or choose one to upload)</li>
-          <li>Run records: distance, start time, the shoe you wore, source (Apple Health / Health Connect / Strava / manual entry), and an external record ID used to prevent duplicates</li>
+          <li>Run records: distance, start time, the shoe you wore, source (Apple Health / Health Connect / Strava / Suunto / Garmin / manual entry), and an external record ID used to prevent duplicates</li>
           <li>Catalog image reports ("This looks like a different shoe")</li>
         </ul>
         <p><strong>Source:</strong> You enter this data yourself, or it is recorded when you pick a shoe from a detected-run notification.</p>
@@ -45,19 +45,19 @@
 
         <h3>2.2 Health & Fitness Data (Apple Health / Health Connect)</h3>
         <p><strong>Permissions:</strong> We request <strong>READ-only</strong> access to HealthKit (Apple Health) on iOS or Health Connect on Android. The app never writes to or modifies Apple Health or Health Connect.</p>
-        <p><strong>Read permissions requested:</strong> workouts and distance only. On Android, we also request background read access so new runs can be detected while the app is closed.</p>
+        <p><strong>Read permissions requested:</strong> workouts and distance. Weekly coach participants may additionally grant read access to heart rate for segment analysis. On Android, we also request background read access so new runs can be detected while the app is closed.</p>
         <p><strong>What we use:</strong></p>
         <ul>
           <li>Workout type (whether it is a run — walks, rides, etc. are ignored)</li>
           <li>Distance</li>
           <li>Workout start time</li>
         </ul>
-        <p><strong>Purpose:</strong> Used only to detect a run you finished with your watch, send a "Which shoes did you wear?" notification, and record the run when you choose a shoe.</p>
-        <p><strong>Storage:</strong> Only the run record you save (distance, start time, source) is stored on our servers. We do not read any other health data, and runs whose notification you ignore are not recorded.</p>
+        <p><strong>Purpose:</strong> Used to detect a run you finished with your watch, send a "Which shoes did you wear?" notification, and record the run when you choose a shoe.</p>
+        <p><strong>Storage:</strong> The shoe shelf stores the distance, start time and source of runs you choose to save. Section 2.8 describes how optional coaching uses eligible workout summaries.</p>
         <p><strong>Restrictions:</strong></p>
         <ul>
           <li>Health data is never used for advertising or marketing.</li>
-          <li>Health data is never sold or shared with third parties.</li>
+          <li>We do not sell health data. External coaching processing requires the consent described in section 2.8.</li>
         </ul>
         <p><strong>Control:</strong> You can change the detection source in app Settings, or revoke access at any time in your device's health settings (iOS Settings &gt; Health / Health Connect).</p>
 
@@ -104,6 +104,13 @@
           <li>Network connection status</li>
         </ul>
         <p><strong>Purpose:</strong> Ensure feature compatibility and debugging.</p>
+
+        <h3>2.8 Optional weekly race coaching</h3>
+        <p>You can manage shoe mileage without enrolling in coaching. If you opt in, your account stores your race goal, available days, frequency and distance limit, confirmed plans, and your links between workouts and shoes.</p>
+        <p>With separate consent for analysis, our Supabase backend summarizes running distance and time, measured segment pace, and optional average heart rate from eligible sources. OpenRouter and either OpenAI or Microsoft Azure receive training summaries, goal time, time until the race and scheduling constraints to generate the next seven days. The model input excludes your name, account ID, GPS route and shoe photos. Weekly coach requests prohibit data collection and request a zero-retention inference route.</p>
+        <p>Direct Suunto and Garmin connections depend on each provider’s availability. You may assign a received run to a shoe. Segment analysis and external AI processing require separate choices and permission for the relevant source. We do not sell partner workout data or use it for AI training or evaluation.</p>
+        <p>You can view and correct saved runs in Records. Withdrawing consent in the coach settings removes your coaching preferences, plans and links. Watch connections and saved mileage records are managed separately. Contact us below to request access, correction, export or deletion.</p>
+        <p>Suunto and Garmin provide account linking and workout delivery. Connecting a watch for mileage alone does not enable external AI processing.</p>
       </section>
 
       <section id="data-usage">
@@ -120,8 +127,8 @@
         <ul>
           <li>❌ We do NOT use your data for marketing or advertising.</li>
           <li>❌ We do NOT sell or rent your data to third parties.</li>
-          <li>❌ We do NOT use health data for advertising or marketing, or share it with third parties.</li>
-          <li>❌ We do NOT send your personal information or run records to AI models.</li>
+          <li>We do not use health data for advertising or marketing.</li>
+          <li>Section 2.8 identifies what a consenting runner shares with coaching providers.</li>
         </ul>
       </section>
 
@@ -142,13 +149,18 @@
           <tbody>
             <tr>
               <td><strong>Supabase</strong></td>
-              <td>Backend database, authentication, file storage (shoe and run records, shoe photos, Strava tokens)</td>
+              <td>Backend database, authentication, file storage (shoe and run records, shoe photos, integration tokens)</td>
               <td><a href="https://supabase.com/privacy" target="_blank">Link</a></td>
             </tr>
             <tr>
               <td><strong>Google Firebase</strong></td>
               <td>Analytics, crash reporting, push notifications, remote config, app security</td>
               <td><a href="https://firebase.google.com/support/privacy" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+              <td><strong>OpenRouter, OpenAI, Microsoft Azure</strong></td>
+              <td>Weekly coach request routing and inference</td>
+              <td><a href="https://openrouter.ai/privacy">OpenRouter</a> · <a href="https://openai.com/policies/privacy-policy/">OpenAI</a> · <a href="https://privacy.microsoft.com/privacystatement">Microsoft</a></td>
             </tr>
             <tr>
               <td><strong>Strava</strong></td>
@@ -175,15 +187,15 @@
         <ul>
           <li><strong>Encryption in transit:</strong> All data is encrypted via HTTPS during transmission.</li>
           <li><strong>Access control:</strong> Supabase Row Level Security (RLS) policies ensure you can access only your own shoes and runs.</li>
-          <li><strong>Token protection:</strong> Strava tokens are stored where only our server can access them.</li>
+          <li><strong>Token protection:</strong> integration tokens are stored where only our server can access them.</li>
           <li><strong>App authentication:</strong> Firebase App Check protects API calls.</li>
         </ul>
         <p><strong>Shoe photos:</strong> Shoe photos you upload are stored at a unique, hard-to-guess address so the app can display them; anyone who has that address can view the photo. Please do not upload photos that show your face or other personally identifying content.</p>
         <p><strong>Retention Period:</strong></p>
         <ul>
           <li>We retain your data while your account is active.</li>
-          <li>Health data remains in your account only as the run records you save (distance, start time, source) and is not shared externally.</li>
-          <li>When you delete your account, all data is permanently deleted.</li>
+          <li>We remove coaching goals, plans and reviews when you withdraw coaching consent or delete your account.</li>
+          <li>Deleting your account removes saved shoes, runs and coaching records. We retain the minimum credentials needed to deregister a connected Garmin account until that request is processed.</li>
         </ul>
       </section>
 
@@ -193,7 +205,7 @@
         <ul>
           <li><strong>Access:</strong> You can view your shoes and run records in the app at any time.</li>
           <li><strong>Correction:</strong> You can edit or delete shoe details and run records.</li>
-          <li><strong>Deletion:</strong> You can delete your account, which permanently deletes all data. (Settings &gt; Account)</li>
+          <li><strong>Deletion:</strong> You can delete your account, and its saved records. (Settings &gt; Account)</li>
           <li><strong>Withdraw consent:</strong> You can revoke health data access in your device settings and disconnect Strava in app Settings at any time. Push notifications can be turned off in app or device settings.</li>
           <li><strong>Data portability:</strong> You have the right to move your data to another service.</li>
         </ul>
@@ -241,11 +253,10 @@
       </section>
 
       <section id="hosting">
-        <h2>11. GitHub Pages Hosting Notice</h2>
+        <h2>11. Website hosting</h2>
         <p>
-          This privacy policy page is hosted on GitHub Pages.
-          GitHub may collect visitor IP addresses for security purposes.
-          For more information, see the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank">GitHub Privacy Statement</a>.
+          Google Firebase Hosting serves have2.run. GitHub processes web requests when you visit the GitHub Pages edition.
+          See the <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a> for their respective handling of visits.
         </p>
       </section>
     </main>
